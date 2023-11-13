@@ -1,0 +1,4 @@
+#Constradints:
+#N node and N-1 edge
+import random 
+def random_tree()
