@@ -1,0 +1,20 @@
+Atakan is passionate about prime numbers and has come across Goldbach's hypothesis stating that every even integer greater than 2 can be represented as the sum of two primes.
+
+Motivated by this, he devised the "Atakanbach Problem," which asserts that there must be at least 'k' prime numbers between 2 and 'n' (inclusive) that can be expressed as the sum of three integers: two neighboring prime numbers and 1.
+
+For instance:
+
+31 = 13 + 17 + 1
+43 = 19 + 23 + 1
+Your task is to determine whether a minimum of 'k' prime numbers between 2 and 'n' can be represented in this manner.
+
+Input Format:
+
+The first line of the input contains two integers 'n' and 'k'.
+Output Format:
+
+Print TRUE if at least 'k' prime numbers from 2 to 'n' can be expressed in the described form. Otherwise, print FALSE.
+Constraints:
+
+2 ≤ n ≤ 10^6
+0 ≤ k ≤ 10^5
