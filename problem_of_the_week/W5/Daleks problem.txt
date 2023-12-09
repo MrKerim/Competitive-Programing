@@ -1,0 +1,32 @@
+Daleks are trying to destroy the world as usual. They’ve made an evil plan for that. If 4 synchronized daleks come together, a big bomb will destroy the whole world.
+
+Each dalek has a unique number (like a serial number), and 4 daleks are said to be synchronized if and only if bitwise exclusive-or (XOR) between them is equal to zero. You are given a sequence of numbers indicates the unique numbers of daleks, and if there are synchronized daleks among them, that means we are done. Your task is to find if it is doomsday for humanity or not.
+
+More formally, you need to answer whether there exist four indices x, y, z, w such that 1 ≤ x < y < z < w ≤ n and Ax ⊕ Ay ⊕ Az ⊕ Aw = 0.
+
+Input Format
+The first line contains a single integer, number of daleks, n.
+
+The second line contains n integers for representing unique numbers of daleks A1...n. It is guaranteed that all Ai are distinct.
+
+Output Format
+4 ≤ n ≤ 10^5
+0 ≤ Ai ≤ 10^5
+Constraints
+Output "Yes" if there are four indices satisfying the conditions(doomsday for humanity), or "No" otherwise.
+
+Sample Input 1
+
+5
+1 2 3 4 5
+Sample Output 1
+
+Yes
+Sample Input 2
+
+5
+1 2 4 8 16
+Sample Output 2
+
+No
+

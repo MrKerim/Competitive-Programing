@@ -1,17 +1,27 @@
 #include <iostream>
 #include <vector>
-using namespace std;
+#include <map>
 
+using namespace std;
 int32_t main(){
-    int n=4;
-    vector<int> daleks(n);
+    map<int,int> r;
+    int n;cin>>n;
+    vector<int> input(n);
+    for(int i=0;i<n;i++){
+        cin>>input[i];
+    }
     for (int i = 0; i < n; i++)
     {
-        cin>>daleks[i];
-    }
-
- cout<<(daleks[0] ^ daleks[1] ^ daleks[2] ^ daleks[3]  )<<endl;
+        for (int j = i+1; j < n; j++)
+        {
+            int first = input[i];
+            int second = input[j];
+            r[first^second]++;
+            if(r[first^second]>1) {cout<<"Yes\n"; return 0;}
+            
+        }
         
-        return 0;
+    }
+    cout<<"No\n";
     
 }
