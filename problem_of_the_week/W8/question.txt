@@ -1,0 +1,25 @@
+The world is battling the widespread impact of the coronavirus pandemic. Despite numerous attempts to combat it, traditional vaccines from companies like Biontech, Moderna, Astrazeneca, Sputnik V, Sinopharm, and Sinovac have proven ineffective. However, a new solution called the "inzvac vaccine" has emerged. This unique vaccine operates by counting the occurrences of specific letters (i, n, z, v, a, c) in a given string from left to right. People who determine these occurrences are considered vaccinated. Your task is to calculate the number of these occurrences in the provided string and help eliminate the virus.
+
+Input Format:
+An integer n representing the string size.
+A string S containing the characters.
+
+Output Format:
+Print the number of occurrences in modulo 10^9 + 7.
+
+Constraints:
+6 ≤ |S| ≤ 10^5
+
+Sample Input 1:
+6
+inzvac
+
+Sample Output 1:
+1
+
+Sample Input 2:
+8
+ininzvac
+
+Sample Output 2:
+3
