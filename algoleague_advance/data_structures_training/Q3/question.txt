@@ -1,0 +1,48 @@
+A bracket is considered to be any one of the following characters: (, {, [, ], }, ).
+
+Two brackets are considered to be a matched pair if an opening bracket (i.e., (, [, or {) occurs to the left of a closing bracket (i.e., ), ], or }) of the exact same type. There are three types of matched pairs of brackets: [], {}, and ().
+
+A matching pair of brackets is not balanced if the set of brackets it encloses are not matched. For example, {[(])} is not balanced because the contents in between { and } are not balanced. The pair of square brackets encloses a single, unbalanced opening bracket, (, and the pair of parentheses encloses a single, unbalanced closing square bracket, ].
+
+By this logic, we say a string of brackets is balanced if the following conditions are met:
+
+- It contains no unmatched brackets.
+- The substring of brackets enclosed within the confines of a matched pair of brackets is also a matched pair of brackets.
+
+You are given a string of brackets of size N. You need to split this string into two parts, and the following conditions must be met:
+
+- Both the left substring and the right substring must have more than one bracket.
+- Both the left and right substrings must be balanced.
+
+If you can manage to do that, print YES; otherwise, print NO.
+
+Input Format:
+The first line contains N — the size of the bracket sequence.
+The second line contains a string of N characters (brackets).
+
+Output Format:
+Print YES or NO.
+
+Constraints:
+2 ≤ N ≤ 10^6
+
+Sample Input 1:
+8
+({[]})()
+
+Sample Output 1:
+YES
+
+Sample Input 2:
+6
+({[]})
+
+Sample Output 2:
+NO
+
+Sample Input 3:
+6
+({(]})
+
+Sample Output 3:
+NO

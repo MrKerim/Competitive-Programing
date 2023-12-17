@@ -1,0 +1,19 @@
+Of course! Here's a simplified explanation without using any formatting:
+
+You have a list of positive numbers. Your task is to find a section (subarray) of the list that has a specific length K and gives you the highest possible sum.
+
+Input:
+- Initially, you're given two numbers: N and K. These numbers tell you the size of the list and the length of the section you need to find.
+- Following that, you'll see a line containing N numbers, which represent the individual values in the list.
+
+Output:
+- Your answer should be the sum of the section (subarray) that gives the largest sum possible.
+
+Constraints:
+- The list size N and the section length K will both be between 1 and 200,000.
+- All the numbers in the list are positive integers between 1 and 200,000.
+
+Examples:
+- For Sample Input 1, if the list is [3, 10, 10, 10, 10, 3, 10] with a size of 7 and you're looking for a section of length 6, the section [10, 10, 10, 10, 3, 10] has the highest sum of 53.
+- For Sample Input 2, given the list [5, 1, 10, 6, 6, 10, 8, 5, 4, 8] with a size of 10 and a required section length of 7, the section [10, 6, 6, 10, 8, 5, 4] has the highest sum of 49.
+- For Sample Input 3, if the list is [242, 108, 932, 98, 166, 222, 213, 36, 105, 213, 407, 645, 187, 771, 448, 614, 457, 800, 504, 96] with a size of 20 and you're aiming for a section of length 3, the section [771, 448, 614] has the highest sum of 1871.

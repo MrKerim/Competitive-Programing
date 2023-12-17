@@ -1,0 +1,41 @@
+Task: Harun taught Mr. Atakan about data structures, but now Mr. Atakan needs your help to solve this task involving two types of queries:
+
+Add a number, denoted as x, to a list.
+Print the maximum number in the list and then remove this number. If the list is empty, print -1.
+
+Input Format:
+The first line contains N — the number of queries.
+Each of the next N lines of each test case is in one of two forms:
+
+1 x — add number x to the list.
+2 — Print the maximum number in the list and then remove this number. If the list is empty, print -1.
+
+Output Format:
+For each test case, output the answers of queries of the second type, in the order they are given.
+
+Constraints:
+- 1 ≤ N ≤ 3 × 10^5
+- 1 ≤ x ≤ 10^9
+------------------
+Sample Input 1
+
+10
+2
+1 5
+1 7
+1 2
+2
+1 4
+2
+2
+2
+2
+
+Sample Output 1
+
+-1
+7
+5
+4
+2
+-1
