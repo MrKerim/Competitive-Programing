@@ -1,0 +1,55 @@
+Napoleon Bonaparte, also known as Napoleon I, was a significant French leader. He gained prominence during the French Revolution and led successful campaigns in the Revolutionary Wars.
+
+After Napoleon's wars, he strategically grew his army at specific times. However, following defeats in later conflicts, his army size decreased. With access to a historical document detailing the initial soldier count and subsequent changes year by year, you have a unique opportunity. You can use a single-use time machine to rectify past mistakes by nullifying a military change for a specific year. The goal is to achieve the maximum historical troop count, not necessarily the highest count Napoleon ever reached.
+
+Note: The provided dates and military changes are fictional and do not relate to actual historical events.
+
+Input Format:
+The first line provides values for the total number of years (n) and the initial number of soldiers (k). Following that, there are n lines containing pairs of year (y) and the corresponding change in the military count (c).
+
+Output Format:
+Determine the maximum number of soldiers Napoleon could have reached.
+
+Constraints:
+- Number of years ranges from 1 to 500.
+- Initial soldier count varies from 0 to 1,000,000.
+- Changes in soldier count range from -1,000,000 to 1,000,000.
+- The soldier count remains positive throughout every year.
+
+Sample Input 1:
+10 24
+1803 +20
+1805 +29
+1807 -7
+1808 +30
+1812 -3
+1814 +7
+1816 +23
+1820 -11
+1821 +21
+1825 +3
+
+Sample Output 1:
+147
+
+Explanation 1:
+By preventing the change in 1820, a maximum count of 147 soldiers could be reached.
+
+Sample Input 2:
+10 12
+1804 +15
+1806 -12
+1807 +23
+1809 +19
+1811 +21
+1815 +18
+1817 -22
+1820 -19
+1823 +30
+1824 -14
+
+Sample Output 2:
+108
+
+Explanation 2:
+Blocking the change in 1806 would result in achieving the maximum count of 108 soldiers.
