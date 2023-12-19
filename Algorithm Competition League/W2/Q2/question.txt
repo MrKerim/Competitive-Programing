@@ -1,0 +1,38 @@
+In the city of Melihistan, there's a new way to calculate charges for natural gas usage. Instead of a traditional billing system, they've introduced a unique method. Here's how it works:
+
+When you use a certain amount of gas (measured in cubic meters) in a month, you'll be charged a specific amount based on that usage.
+
+The rule for calculating the charge is determined by a function called 
+f(x). This function counts how many numbers, less than or equal to the amount of gas used (x), can be expressed as the sum of two non-negative powers of 2.
+
+For example, let's say you used 5 cubic meters of gas. Now, according to the rule, the charge for this usage would be 4 liras. This is because there are 4 numbers that fit the rule: 2 (1 + 1), 3 (2 + 1), 4 (2 + 2), and 5 (4 + 1).
+
+Your task is to find the charge for the gas usage based on this unique billing system.
+
+Input:
+
+The first line contains a number 
+Q
+Q, which represents the number of queries.
+Following that, each line contains a number 
+X
+X, indicating the gas usage for each query.
+Output:
+
+For each query, output the charge calculated using the function f(x).
+Constraints:
+
+
+Q (number of queries) ranges from 1 to 200,000.
+X (gas usage) ranges from 1 to 1,000,000,000.
+For instance, if the input is:
+
+Sample input
+2
+5
+8
+
+Sample Output
+4
+6
+This means that for the first query (gas usage = 5), the charge is 4 liras, and for the second query (gas usage = 8), the charge is 6 liras, based on the given function.
