@@ -1,0 +1,5 @@
+All two identical exercises next to each other should be deleted until there are no two identical exercises next to each other in the program.
+
+Input : 
+First line containing n, the number of excersizes.
+Second line containing n strings , top of excersizes.
