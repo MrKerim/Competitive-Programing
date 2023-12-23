@@ -1,0 +1,21 @@
+Atakan wants to buy N items from the inzva store. He has M discount tickets given by Havva. Each ticket allows him to get an item at half price (rounded down to the nearest whole number). 
+
+Given N, M, and the cost of each item Atakan wants to buy, the task is to find the minimum cost required to purchase all the items.
+
+Input Format:
+The first line contains two integers, N and M, respectively.
+The second line contains N integers, representing the cost of each item.
+
+Output Format:
+Print a single integer, indicating the minimum cost required to buy all items.
+
+Constraints:
+1 <= N, M <= 10^5
+1 <= cost of an item <= 10^9
+
+Sample Input 1:
+4 4
+1 9 3 5
+
+Sample Output 1:
+6
