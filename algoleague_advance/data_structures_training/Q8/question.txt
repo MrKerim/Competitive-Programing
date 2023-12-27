@@ -1,0 +1,21 @@
+Buğra, a student who dislikes mathematics and physics, has struggled in his Electrical Engineering class, failing it three times already. He's now attempting it for the fourth time. Despite needing a calculator for the course, Buğra carelessly left his calculator at his home, which is located out of town. Consequently, he has decided to build his own calculator. However, he detests coding and has come to you for help in creating it. Your task is to design a calculator that processes a given statement as a string and computes the result. The statement will only contain addition (+), subtraction (-), and multiplication (*).
+
+Note: Ensure that the modulo operation with 10^9+7 is applied, and the result remains non-negative. In C++, adding 10^9+7 to the final result before the modulus operation is necessary since taking the modulus can sometimes yield a negative outcome.
+
+Input Format:
+The first line includes 'n' - the length of 's'.
+The second line contains a string 's' - the statement to calculate.
+
+Output Format:
+Print an integer - the result of the calculation.
+
+Constraints:
+1 ≤ n ≤ 3 × 10^5
+1 ≤ size of numbers in s ≤ 10^2
+
+Sample Input 1:
+6
+10+2*7
+
+Sample Output 1:
+24
