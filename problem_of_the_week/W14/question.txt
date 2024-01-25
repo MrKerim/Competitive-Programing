@@ -1,0 +1,38 @@
+The world is facing a grave danger as Decepticons are poised to attack a secret base in Niğde, home to groundbreaking technological advancements and classified information. To counter this threat, Optimus Prime is mobilizing an army, seeking the assistance of Morphyus Prime the Great. While you, a mere human, cannot directly participate in the intense war, you can play a crucial role by locating Morphyus Prime and delivering Optimus's message.
+
+Morphyus Prime, with a penchant for prime numbers, uses them cleverly to conceal her whereabouts. However, she avoids predictability by choosing hills with "prime numbers for each digit." For instance, she might hide in hill number 23 or 37, but never in hill number 13. Your mission is to assign Autobots to search every possible hill where Morphyus Prime could be hiding. The goal is to determine the minimum number of Autobots needed for this task.
+
+**Input Format:**
+- A single integer representing the number of hills, N.
+
+**Output Format:**
+- A single integer indicating the number of Autobots required to investigate potential hiding spots for Morphyus Prime.
+
+**Constraints:**
+- 1 ≤ N ≤ 105
+
+**Sample Input 1:**
+```
+26
+```
+
+**Sample Output 1:**
+```
+7
+```
+
+**Explanation 1:**
+Possible hills: 2, 3, 5, 7, 22, 23, 25
+
+**Sample Input 2:**
+```
+27
+```
+
+**Sample Output 2:**
+```
+8
+```
+
+**Explanation 2:**
+Possible hills: 2, 3, 5, 7, 22, 23, 25, 27
