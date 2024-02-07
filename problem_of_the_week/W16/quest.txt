@@ -1,0 +1,9 @@
+You are in the waiting room of a dentistry. It's raining outside and you are waiting for your turn while sitting at one of the couches. You feel you need to get out of this aimless blood sucking place before it melts your brain to the last cells. Due to the enormus and unnecessary feeling of guilt you decided to stay. However still you can feel your breain metling away and pouring from your ears as you watch the old lady took the magazine that was on the sofa and slowly starts to read it while looking at the magazine as it was just endless void in there. No you need to get out of here however you can't.
+
+Luckly you there is a TV in the room. No nothing is played on it. Just regular DVD logo bouncing back and forth of the walls of the screen. You decided to calculate how many times it will hit the walls until it miraculusy hits one of the corners.
+
+Input Format:
+N,a,M -> Width of the screen,the vertical distance the logo goes as it moves from one side to another, and height of the screen
+
+Output Format:
+Single integer. Number of times the ball hit the wall.(Corner counts as one)
