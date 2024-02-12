@@ -16,7 +16,7 @@ Output a single integer — the number of different indiced pairs which products
 
 - $1 \leq N \leq 10^5$
 - $0 \leq M \leq 10^5$
-- $0 \leq A_i$ , where $A$ is given array $ \leq 10^4$
+- $0 \leq A_i$ , where $A$ is given array $\leq 10^4$
 
 **Sample Input 1**
 
