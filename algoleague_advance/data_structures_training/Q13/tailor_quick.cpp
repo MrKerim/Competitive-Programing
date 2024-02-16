@@ -1,39 +1,33 @@
 #include <iostream>
 #include <vector>
 #include <queue>
+#define C INT64_MIN
 #define int long long
 using namespace std;
 
 int32_t main(){
     int n; cin>>n;
-
+    vector<int> songs(n); int max = INT64_MIN;
+    for(int i=0; i<n; i++){ cin>>songs[i]; if(songs[i]>max) max = songs[i]; }
+    priority_queue<pair<int,int>, vector<pair<int,int> >, greater<pair<int,int> > > pq;
     vector<int> results(n);
-    int max = 0;
-    vector<pair<int,int> > songs;
-    for(int i=0; i<n; i++) { int a; cin>>a; songs.push_back(make_pair(a, i)); if(a>max) max = a;}
-    for(int i=0; i<n; i++) if(songs[i].first == max) results[i] = -2;
-    priority_queue<pair<int,int>, vector<pair<int,int> >,greater<pair<int,int> > > pq;
-    for(int i=0; i<n; i++) pq.push(songs[i]);
+    for(int i=0; i<n; i++) pq.push(make_pair(songs[i], i));
 
-    while (!pq.empty())
-    {
-        pair<int,int> song = pq.top();
-        pq.pop();
-        if(results[song.second] == -2) {continue; cout<<"index: "<<song.second<<" It's a max song"<<endl; }
-        // This song is not the max so we have to proccess it
-        if(song.first == songs[(song.second+1)%n].first){
-            //here goes some code
+    while(!pq.empty()){
+        pair<int,int> song = pq.top(); pq.pop();
+        int time = song.first; int index = song.second;
+        if(songs[index] == C) continue;
+        if(songs[index] == max) {
+            results[index] = -2;
+            songs[index] = C;
+            continue;
         }
-        else{
-            cout<< "index: "<<song.second<< " value: "<<song.first<< "index+1"<<(song.second+1)%n<< " value: "<<songs[(song.second+1)%n].first<<endl;
-            results[song.second] = songs[(song.second+1)%n].second;
-            cout<<"results["<<song.second<<"] = "<<results[song.second]<<endl;
-            songs.erase(songs.begin() + (song.second)%n);
-            cout<<"we erase the song"<<endl;
-        }
-
+        int new_index = index;
+        while(songs[new_index] == C || songs[index] == songs[new_index]) new_index = (new_index+1)%n;
+        results[index] = new_index;
+        songs[index] = C;
     }
-    
+
     for(int i=0; i<n; i++) cout<<results[i]+1<<" ";
     
 }
