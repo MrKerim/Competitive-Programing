@@ -1,3 +1,4 @@
+# Palindrome Reader
 A palindrome string is a sequence of characters that reads the same forwards as backward. Given a string containing only uppercase letters from the Latin alphabet, your challenge is to rearrange its characters to form a palindrome. If multiple palindromes exist, please choose the lexicographically smallest one.
 
 ### Input Format
