@@ -1,4 +1,5 @@
-# Competitive-Programing
+# Competitive-Programing  
+
 This repo contains competitive programming problem solutions mostly solved in CPP.
 Most of the questions are taken from the algoleague and created by inzva.
 The repo also shows the programs of the inzva that I have participated in before.
@@ -23,3 +24,6 @@ While anyone can be a participant in some questions. Some are not visible to oth
 Problem Of The Week - September 2023 / ?
 As the name states, this is a problem list that consists of new problems every week on algoleague.
 There are only solutions now, I might also add the problem statements from now on.
+---
+## Favorites
+- [itirazi olan var mi](https://github.com/MrKerim/Competitive-Programing/tree/main/algoleague_advance/data_structures_training/Q17)
