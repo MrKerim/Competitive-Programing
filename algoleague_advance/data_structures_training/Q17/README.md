@@ -1,6 +1,6 @@
 # İtirazı olan var mı?
 
-There are `n` cats in a row awaiting attention from the algorithm team, each with their own beauty rating represented as `b0`, `b1`, …, `bn−1`. For every cat at position `i`, determine the leftmost `li` and rightmost `ri` positions where the cats are at least as beautiful as the cat at position `i`, satisfying `0 ≤ li ≤ i ≤ ri < n`.
+There are `n` cats in a row awaiting attention from the algorithm team, each with their own beauty rating represented as `b0`, `b1`, …, `bn−1`. For every cat at position `i`, determine the leftmost `li` and rightmost `ri` positions where the cats are at least as beautiful as the cat at position `i`, satisfying $0 ≤ li ≤ i ≤ ri < n$.
 
 ### Input Format
 The first line contains an integer `n` — the number of cats.
@@ -11,8 +11,8 @@ The second line contains `n` integers `b0`, `b1`, …, `bn−1` — the beauties
 Print `n` lines. The `ith` line should contain `li` and `ri`. Note that the positions are `0`-indexed.
 
 ### Constraints
-- 1 ≤ n ≤ 2 ⋅ 10^5
-- 1 ≤ bi ≤ 10^9
+- $1 ≤ n ≤ 2 ⋅ 10^5$
+- $1 ≤ bi ≤ 10^9$
 
 #### Sample Input 1 
 1  
