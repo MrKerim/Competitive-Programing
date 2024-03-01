@@ -1,0 +1,1 @@
+# İtirazı olan var mı?
