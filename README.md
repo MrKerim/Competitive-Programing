@@ -1,4 +1,4 @@
-# Competitive-Programing  
+# Competitive-Programinggggg
 
 This repo contains competitive programming problem solutions mostly solved in CPP.
 Most of the questions are taken from the algoleague and created by inzva.
