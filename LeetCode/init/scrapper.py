@@ -145,9 +145,9 @@ print("Pushing to the repo..")
 try:
     os.chdir(parent_folder)
     subprocess.run(["git", "status"], check=True)
-    #subprocess.run(["git", "add", "."], check=True)
-    #subprocess.run(["git", "commit", "-m", title_content], check=True)
-    #subprocess.run(["git", "push", "origin", "main"], check=True)
+    subprocess.run(["git", "add", "."], check=True)
+    subprocess.run(["git", "commit", "-m", title_content], check=True)
+    subprocess.run(["git", "push", "origin", "main"], check=True)
     print("Git operations completed successfully.")
 except subprocess.CalledProcessError as e:
     print(f"An error occurred during Git operations: {e}")
