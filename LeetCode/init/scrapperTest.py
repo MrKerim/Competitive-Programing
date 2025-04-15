@@ -1,4 +1,5 @@
 import time
+import threading
 import os
 import re
 import tkinter as tk
@@ -9,21 +10,77 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 
+
+def measure_signal_strength():
+
+    try:
+        result = subprocess.run(['ping', '-c', '3', '8.8.8.8'], capture_output=True, text=True)
+        if result.returncode != 0:
+            return 0
+        
+        output = result.stdout
+
+        # Look for the line with min/avg/max/mdev
+        for line in output.splitlines():
+            if "min/avg/max" in line or "rtt min/avg/max" in line:
+                parts = line.split('=')[1].strip().split(' ')[0].split('/')
+                avg_ping = float(parts[1])
+
+                if avg_ping < 50:
+                    return 3  # Strong
+                elif avg_ping < 150:
+                    return 2  # Medium
+                else:
+                    return 1  # Weak
+
+        return 1  # Fallback if parsing fails
+    except Exception as e:
+        print("Error measuring signal strength:", e)
+        return 0
+
+
 def get_inputs():
+    
+    connection_status = -1
+    #stop_signal_event = threading.Event()
+
     def on_continue(event=None):
+        #nonlocal stop_signal_event
+        #stop_signal_event.set()
         nonlocal url, code, language
         url = url_entry.get("1.0", tk.END).strip()
         code = code_text.get("1.0", tk.END).strip()
         language = language_var.get()
-        root.destroy()
+        #stop the thread
+
+        root.after(100, root.destroy)
 
     def on_cancel():
+        #nonlocal stop_signal_event
+        #stop_signal_event.set()
         nonlocal url, code, language
         url = None
         code = None
         language = None
-        root.destroy()
-        exit()
+        root.after(100, root.destroy)
+
+    def start_signal_checker():
+        print("Signal checker started")
+        def signal_loop():
+            #while not stop_signal_event.is_set():
+            try:
+                strength = measure_signal_strength()
+                print("Signal strength:", strength)
+                update_canvas(strength)
+                    # Only schedule if the root is still alive
+                if root.winfo_exists():
+                    root.after(5000, signal_loop)
+            except tk.TclError:
+                print("Window closed, stopping signal checker.")
+
+        root.after(100, signal_loop)
+
+        #threading.Thread(target=signal_loop, daemon=True).start()
 
     root = tk.Tk()
     root.title("LeetCode Pusher")
@@ -31,7 +88,7 @@ def get_inputs():
     font_style = ("Arial", 16)
 
     window_width = 600
-    window_height = 400
+    window_height = 520
 
     screen_width = root.winfo_screenwidth()
     screen_height = root.winfo_screenheight()
@@ -44,8 +101,48 @@ def get_inputs():
     img = tk.PhotoImage(file="./icon.png")
     root.iconphoto(True, img)
 
+
+    connection_status_frame = tk.Frame(root)
+    connection_status_frame.pack(pady=(10, 5))
+
+    connection_status_label = tk.Label(connection_status_frame, text="Status ", font=("Arial", 20))
+    connection_status_label.pack(side=tk.LEFT, padx=10)
+
+    canvas = tk.Canvas(connection_status_frame, width=200, height=100)
+    canvas.pack(side=tk.LEFT, padx=10)
+
+
+    def update_canvas(connection_status):
+        canvas.delete("all") 
+        def draw_bottom_aligned_rectangle(canvas, x, width, height, base_y= 65, fill="blue"):
+            x0 = x
+            y0 = base_y - height
+            x1 = x + width
+            y1 = base_y
+            canvas.create_rectangle(x0, y0, x1, y1, fill=fill)
+
+        # Example usage
+        bar_width = 20
+        spacing = 8
+        heights = [20, 35, 50]
+
+        for i, height in enumerate(heights):
+            x = i * (bar_width + spacing) + 10
+            if connection_status == 0:
+                draw_bottom_aligned_rectangle(canvas, x, bar_width, height, fill="red")
+            elif connection_status == 1:
+                draw_bottom_aligned_rectangle(canvas, x, bar_width, height, fill="orange")
+            elif connection_status == 2:
+                draw_bottom_aligned_rectangle(canvas, x, bar_width, height, fill="yellow")
+            elif connection_status == 3:
+                draw_bottom_aligned_rectangle(canvas, x, bar_width, height, fill="green")
+            else:
+                draw_bottom_aligned_rectangle(canvas, x, bar_width, height, fill="gray")
+
+    update_canvas(connection_status)
+
     url_label = tk.Label(root, text="Link", font=("Arial", 20))
-    url_label.pack(pady=(10, 5))
+    url_label.pack(pady=(0, 5))
 
     url_entry = tk.Text(root, height=2, width=80, font=font_style)
     url_entry.pack(pady=(0, 10))
@@ -77,7 +174,7 @@ def get_inputs():
     url = None
     code = None
     language = None
-
+    start_signal_checker()
     root.mainloop()
 
     return url, code, language
@@ -88,7 +185,6 @@ url, code, language = get_inputs()
 if url == "" :
     print("Canceling..")
     exit()
-
 
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 
