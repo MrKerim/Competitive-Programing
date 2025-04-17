@@ -19,5 +19,5 @@ The only configuration is needed for the script to work is change the directory 
 Here is the user interface for the application
 
 <p align="center">
-  <img src="assets/app.png" alt="M6800" width="200">
+  <img src="assets/app.png" alt="M6800">
 </p>
