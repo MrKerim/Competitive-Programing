@@ -11,7 +11,7 @@ LeetCode Pusher is a light weight python script that pulls the content of the qu
 Then providing the Operating system with some bash commands to push it to corresponding repository.
 
 <p align="center">
-  <img src="assets/structure.png" alt="M6800" width="200">
+  <img src="assets/structure.png" alt="M6800"">
 </p>
 
 The only configuration is needed for the script to work is change the directory names written in it. Since your terminal most likely configured with github there is nothing to do on it anyway.
