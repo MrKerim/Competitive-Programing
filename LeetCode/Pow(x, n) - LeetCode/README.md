@@ -1,5 +1,5 @@
 # Pow(x, n) - LeetCode
-[See the question in LeetCode](https://leetcode.com/problems/powx-n/submissions/1489972408/)
+[See the question in LeetCode](https://leetcode.com/problems/powx-n/submissions/1717653671/?envType=study-plan-v2&envId=top-interview-150)
 
 Can you solve this real interview question? Pow(x, n) - Implement pow(x, n) 
 <p align="center">
