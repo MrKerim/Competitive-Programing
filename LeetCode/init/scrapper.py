@@ -57,7 +57,7 @@ def get_inputs():
     code_label.pack(side=tk.LEFT, padx=10)
 
     language_var = tk.StringVar(value="cpp")
-    language_dropdown = ttk.Combobox(code_frame, textvariable=language_var, values=["cpp", "py", "js"], font=font_style)
+    language_dropdown = ttk.Combobox(code_frame, textvariable=language_var, values=["cpp", "py", "js","sql"], font=font_style)
     language_dropdown.pack(side=tk.LEFT, padx=10)
 
     code_text = tk.Text(root, height=10, width=80, font=font_style)
