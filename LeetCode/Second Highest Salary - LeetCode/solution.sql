@@ -1,0 +1,1 @@
+https://leetcode.com/problems/second-highest-salary/submissions/1727798113/?envType=study-plan-v2&envId=top-sql-50
